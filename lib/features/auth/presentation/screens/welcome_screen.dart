@@ -25,7 +25,7 @@ class WelcomeScreen extends StatelessWidget {
               style: Theme.of(context).textTheme.titleLarge?.copyWith(
                 color: AppColors.textPrimary,
                 fontSize: 20,
-                fontWeight: FontWeight.w300,
+                fontWeight: FontWeight.w200,
                 letterSpacing: 0,
               ),
             ),

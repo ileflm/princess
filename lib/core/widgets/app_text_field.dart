@@ -47,7 +47,7 @@ class AppTextField extends StatelessWidget {
             labelText!,
             style: theme.textTheme.titleMedium?.copyWith(
               color: AppColors.textPrimary,
-              fontWeight: FontWeight.w500,
+              fontWeight: FontWeight.w200,
             ),
           ),
           AppSpacing.hS,
@@ -69,7 +69,7 @@ class AppTextField extends StatelessWidget {
               style: theme.textTheme.bodyMedium?.copyWith(
                 color: AppColors.textPrimary,
                 fontSize: 12,
-                fontWeight: FontWeight.w300,
+                fontWeight: FontWeight.w200,
               ),
               decoration: InputDecoration(
                 hintText: hintText,
@@ -88,7 +88,7 @@ class AppTextField extends StatelessWidget {
                 hintStyle: theme.textTheme.bodySmall?.copyWith(
                   color: AppColors.textSecondary.withValues(alpha: 0.72),
                   fontSize: 11,
-                  fontWeight: FontWeight.w300,
+                  fontWeight: FontWeight.w200,
                 ),
                 prefixIcon: prefixIcon != null
                     ? IconTheme(

@@ -88,7 +88,7 @@ class _CreatePasswordScreenState extends ConsumerState<CreatePasswordScreen> {
                   style: Theme.of(context).textTheme.bodySmall?.copyWith(
                     color: AppColors.textSecondary,
                     fontSize: 8,
-                    fontWeight: FontWeight.w300,
+                    fontWeight: FontWeight.w200,
                   ),
                 ),
                 const SizedBox(height: 34),

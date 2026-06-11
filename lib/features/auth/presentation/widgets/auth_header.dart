@@ -20,7 +20,7 @@ class AuthHeader extends StatelessWidget {
             color: AppColors.textPrimary,
             fontSize: 22,
             height: 1.28,
-            fontWeight: FontWeight.w300,
+            fontWeight: FontWeight.w200,
             letterSpacing: 0,
           ),
         ),
@@ -31,7 +31,7 @@ class AuthHeader extends StatelessWidget {
             style: theme.textTheme.bodySmall?.copyWith(
               color: AppColors.textSecondary,
               height: 1.45,
-              fontWeight: FontWeight.w300,
+              fontWeight: FontWeight.w200,
             ),
           ),
         ],

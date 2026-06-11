@@ -76,7 +76,7 @@ class _ForgotPasswordScreenState extends ConsumerState<ForgotPasswordScreen> {
                   color: AppColors.textSecondary,
                   fontSize: 8,
                   height: 1.35,
-                  fontWeight: FontWeight.w300,
+                  fontWeight: FontWeight.w200,
                 ),
               ),
               const SizedBox(height: 24),
@@ -171,7 +171,7 @@ class _ContactCard extends StatelessWidget {
                       style: Theme.of(context).textTheme.bodySmall?.copyWith(
                         color: AppColors.textSecondary,
                         fontSize: 8,
-                        fontWeight: FontWeight.w300,
+                        fontWeight: FontWeight.w200,
                       ),
                     ),
                     const SizedBox(height: 4),
@@ -180,7 +180,7 @@ class _ContactCard extends StatelessWidget {
                       style: Theme.of(context).textTheme.bodySmall?.copyWith(
                         color: AppColors.textPrimary,
                         fontSize: 8,
-                        fontWeight: FontWeight.w500,
+                        fontWeight: FontWeight.w200,
                       ),
                     ),
                   ],

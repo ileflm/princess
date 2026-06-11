@@ -123,7 +123,7 @@ class _FillProfileScreenState extends ConsumerState<FillProfileScreen> {
                   style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                     color: AppColors.textPrimary,
                     fontSize: 12,
-                    fontWeight: FontWeight.w300,
+                    fontWeight: FontWeight.w200,
                   ),
                 ),
                 const SizedBox(height: 18),
@@ -257,7 +257,7 @@ class _GlassDropdown extends StatelessWidget {
           style: Theme.of(context).textTheme.bodySmall?.copyWith(
             color: AppColors.textPrimary,
             fontSize: 11,
-            fontWeight: FontWeight.w300,
+            fontWeight: FontWeight.w200,
           ),
           decoration: InputDecoration(
             hintText: hint,
@@ -276,7 +276,7 @@ class _GlassDropdown extends StatelessWidget {
             hintStyle: Theme.of(context).textTheme.bodySmall?.copyWith(
               color: AppColors.textSecondary.withValues(alpha: 0.72),
               fontSize: 11,
-              fontWeight: FontWeight.w300,
+              fontWeight: FontWeight.w200,
             ),
           ),
           items: items

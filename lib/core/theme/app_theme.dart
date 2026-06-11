@@ -18,39 +18,42 @@ class AppTheme {
         error: AppColors.error,
         onSurface: AppColors.textPrimary,
       ),
-      textTheme: GoogleFonts.outfitTextTheme(ThemeData.dark().textTheme)
+      textTheme: GoogleFonts.poppinsTextTheme(ThemeData.dark().textTheme)
           .copyWith(
-            displayLarge: GoogleFonts.outfit(
+            displayLarge: GoogleFonts.poppins(
               color: AppColors.textPrimary,
               fontSize: 32,
-              fontWeight: FontWeight.bold,
+              fontWeight: FontWeight.w200,
             ),
-            displayMedium: GoogleFonts.outfit(
+            displayMedium: GoogleFonts.poppins(
               color: AppColors.textPrimary,
               fontSize: 26,
-              fontWeight: FontWeight.bold,
+              fontWeight: FontWeight.w200,
             ),
-            titleLarge: GoogleFonts.outfit(
+            titleLarge: GoogleFonts.poppins(
               color: AppColors.textPrimary,
               fontSize: 20,
-              fontWeight: FontWeight.w600,
+              fontWeight: FontWeight.w200,
             ),
-            titleMedium: GoogleFonts.outfit(
+            titleMedium: GoogleFonts.poppins(
               color: AppColors.textPrimary,
               fontSize: 16,
-              fontWeight: FontWeight.w600,
+              fontWeight: FontWeight.w200,
             ),
-            bodyLarge: GoogleFonts.inter(
+            bodyLarge: GoogleFonts.poppins(
               color: AppColors.textPrimary,
               fontSize: 16,
+              fontWeight: FontWeight.w200,
             ),
-            bodyMedium: GoogleFonts.inter(
+            bodyMedium: GoogleFonts.poppins(
               color: AppColors.textSecondary,
               fontSize: 14,
+              fontWeight: FontWeight.w200,
             ),
-            bodySmall: GoogleFonts.inter(
+            bodySmall: GoogleFonts.poppins(
               color: AppColors.textMuted,
               fontSize: 12,
+              fontWeight: FontWeight.w200,
             ),
           ),
       inputDecorationTheme: InputDecorationTheme(
@@ -80,7 +83,11 @@ class AppTheme {
           borderRadius: BorderRadius.circular(28.0),
           borderSide: const BorderSide(color: AppColors.error, width: 1.5),
         ),
-        hintStyle: const TextStyle(color: AppColors.textMuted, fontSize: 14),
+        hintStyle: GoogleFonts.poppins(
+          color: AppColors.textMuted,
+          fontSize: 14,
+          fontWeight: FontWeight.w200,
+        ),
       ),
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
@@ -90,9 +97,9 @@ class AppTheme {
             borderRadius: BorderRadius.circular(28.0),
           ),
           padding: const EdgeInsets.symmetric(vertical: 16.0),
-          textStyle: GoogleFonts.outfit(
+          textStyle: GoogleFonts.poppins(
             fontSize: 16,
-            fontWeight: FontWeight.w600,
+            fontWeight: FontWeight.w200,
           ),
           elevation: 0,
         ),

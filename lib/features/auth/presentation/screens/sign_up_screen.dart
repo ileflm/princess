@@ -114,7 +114,7 @@ class _SignUpScreenState extends ConsumerState<SignUpScreen> {
                       height: 16,
                       child: Checkbox(
                         value: _rememberMe,
-                        activeColor: const Color(0xFFD9789A),
+                        activeColor: const Color(0xFFC26A82),
                         side: BorderSide(
                           color: Colors.white.withValues(alpha: 0.52),
                           width: 0.8,
@@ -133,7 +133,7 @@ class _SignUpScreenState extends ConsumerState<SignUpScreen> {
                       style: Theme.of(context).textTheme.bodySmall?.copyWith(
                         color: AppColors.textSecondary,
                         fontSize: 9,
-                        fontWeight: FontWeight.w300,
+                        fontWeight: FontWeight.w200,
                       ),
                     ),
                   ],
@@ -224,7 +224,7 @@ class _AuthSwitchText extends StatelessWidget {
           style: Theme.of(context).textTheme.bodySmall?.copyWith(
             color: AppColors.textPrimary,
             fontSize: 8,
-            fontWeight: FontWeight.w300,
+            fontWeight: FontWeight.w200,
           ),
         ),
         InkWell(
@@ -234,7 +234,7 @@ class _AuthSwitchText extends StatelessWidget {
             style: Theme.of(context).textTheme.bodySmall?.copyWith(
               color: const Color(0xFFF0A1BA),
               fontSize: 8,
-              fontWeight: FontWeight.w300,
+              fontWeight: FontWeight.w200,
             ),
           ),
         ),

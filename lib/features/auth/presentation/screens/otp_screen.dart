@@ -101,7 +101,7 @@ class _OtpScreenState extends ConsumerState<OtpScreen> {
       height: 45,
       textStyle: const TextStyle(
         fontSize: 20,
-        fontWeight: FontWeight.w300,
+        fontWeight: FontWeight.w200,
         color: AppColors.textPrimary,
       ),
       decoration: BoxDecoration(
@@ -151,7 +151,7 @@ class _OtpScreenState extends ConsumerState<OtpScreen> {
                     color: AppColors.textSecondary,
                     fontSize: 8,
                     height: 1.35,
-                    fontWeight: FontWeight.w300,
+                    fontWeight: FontWeight.w200,
                   ),
                 ),
                 const SizedBox(height: 34),
@@ -182,7 +182,7 @@ class _OtpScreenState extends ConsumerState<OtpScreen> {
                       style: Theme.of(context).textTheme.bodySmall?.copyWith(
                         color: AppColors.textPrimary,
                         fontSize: 8,
-                        fontWeight: FontWeight.w300,
+                        fontWeight: FontWeight.w200,
                       ),
                     ),
                     GestureDetector(
@@ -194,7 +194,7 @@ class _OtpScreenState extends ConsumerState<OtpScreen> {
                         style: Theme.of(context).textTheme.bodySmall?.copyWith(
                           color: const Color(0xFFF0A1BA),
                           fontSize: 8,
-                          fontWeight: FontWeight.w300,
+                          fontWeight: FontWeight.w200,
                         ),
                       ),
                     ),

@@ -21,7 +21,7 @@ class AuthDivider extends StatelessWidget {
             style: Theme.of(context).textTheme.bodySmall?.copyWith(
               color: AppColors.textSecondary,
               fontSize: 11,
-              fontWeight: FontWeight.w300,
+              fontWeight: FontWeight.w200,
               letterSpacing: 0,
             ),
           ),

@@ -346,7 +346,7 @@ class _GlassOnboardingButton extends StatelessWidget {
                     style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                       color: const Color(0xFFEAD7D2),
                       fontSize: 12,
-                      fontWeight: FontWeight.w300,
+                      fontWeight: FontWeight.w200,
                       letterSpacing: 0,
                     ),
                   ),
