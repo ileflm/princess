@@ -186,7 +186,22 @@ class _FillProfileScreenState extends ConsumerState<FillProfileScreen> {
                 AppTextField(
                   controller: _phoneController,
                   hintText: 'Phone Number',
-                  prefixIcon: const Icon(Icons.flag_rounded),
+                  prefixIcon: Container(
+                    width: 72,
+                    padding: const EdgeInsets.only(left: 16, right: 8),
+                    child: const Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        QatarFlag(),
+                        SizedBox(width: 6),
+                        Icon(
+                          Icons.keyboard_arrow_down_rounded,
+                          color: AppColors.textSecondary,
+                          size: 18,
+                        ),
+                      ],
+                    ),
+                  ),
                   keyboardType: TextInputType.phone,
                   validator: (value) {
                     if (value == null || value.trim().isEmpty) {
@@ -288,4 +303,67 @@ class _GlassDropdown extends StatelessWidget {
       borderSide: BorderSide(color: color, width: 1),
     );
   }
+}
+
+class QatarFlag extends StatelessWidget {
+  const QatarFlag({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 24,
+      height: 16,
+      decoration: BoxDecoration(
+        border: Border.all(color: Colors.white24, width: 0.5),
+      ),
+      child: const CustomPaint(
+        painter: QatarFlagPainter(),
+      ),
+    );
+  }
+}
+
+class QatarFlagPainter extends CustomPainter {
+  const QatarFlagPainter();
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    final paintMaroon = Paint()
+      ..color = const Color(0xFF8A1538)
+      ..style = PaintingStyle.fill;
+    final paintWhite = Paint()
+      ..color = Colors.white
+      ..style = PaintingStyle.fill;
+
+    // Draw base maroon
+    canvas.drawRect(Rect.fromLTWH(0, 0, size.width, size.height), paintMaroon);
+
+    // Draw white part with serrated teeth
+    final path = Path();
+    path.moveTo(0, 0);
+    
+    final double serrationX = size.width * 0.35;
+    path.lineTo(serrationX, 0);
+    
+    // Draw 9 serrations
+    const int teethCount = 9;
+    final double toothHeight = size.height / teethCount;
+    
+    for (int i = 0; i < teethCount; i++) {
+      final double yStart = i * toothHeight;
+      final double yMid = yStart + (toothHeight / 2);
+      final double yEnd = yStart + toothHeight;
+      
+      path.lineTo(serrationX + (size.width * 0.08), yMid);
+      path.lineTo(serrationX, yEnd);
+    }
+    
+    path.lineTo(0, size.height);
+    path.close();
+    
+    canvas.drawPath(path, paintWhite);
+  }
+
+  @override
+  bool shouldRepaint(covariant CustomPainter oldDelegate) => false;
 }
