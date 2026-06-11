@@ -43,30 +43,33 @@ class DashboardScreen extends ConsumerWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              AppSpacing.hM,
+              const Spacer(),
 
               // Welcome Banner
               Card(
                 child: Padding(
-                  padding: const EdgeInsets.all(AppSpacing.l),
+                  padding: const EdgeInsets.all(AppSpacing.xl),
                   child: Column(
                     children: [
-                      CircleAvatar(
-                        radius: 40,
-                        backgroundColor: AppColors.primary.withValues(
-                          alpha: 0.1,
+                      Container(
+                        padding: const EdgeInsets.all(4),
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          border: Border.all(color: AppColors.primary, width: 2),
                         ),
-                        child: const Icon(
-                          Icons.verified_user_rounded,
-                          color: AppColors.success,
-                          size: 44,
+                        child: const CircleAvatar(
+                          radius: 54,
+                          backgroundColor: AppColors.cardBg,
+                          backgroundImage: AssetImage('assets/images/avatar_profile.png'),
                         ),
                       ),
-                      AppSpacing.hM,
+                      const SizedBox(height: 24),
                       Text(
                         'Welcome, ${user?.fullName ?? "Princess Dev"}!',
                         style: theme.textTheme.titleLarge?.copyWith(
                           fontWeight: FontWeight.bold,
+                          fontSize: 24,
+                          color: AppColors.textPrimary,
                         ),
                       ),
                       AppSpacing.hS,
@@ -80,47 +83,8 @@ class DashboardScreen extends ConsumerWidget {
                   ),
                 ),
               ),
-              AppSpacing.hL,
 
-              Text(
-                'Architecture Checklist',
-                style: theme.textTheme.titleMedium?.copyWith(
-                  color: AppColors.textPrimary,
-                ),
-              ),
-              AppSpacing.hM,
-
-              // Dynamic listing of clean architecture items
-              Expanded(
-                child: ListView(
-                  children: const [
-                    _FeatureTile(
-                      icon: Icons.layers_outlined,
-                      title: 'Domain & Data Boundary',
-                      subtitle:
-                          'UI depends on Usecases which talk to Repository abstractions. Fake implementation is completely isolated.',
-                    ),
-                    _FeatureTile(
-                      icon: Icons.code_rounded,
-                      title: 'Riverpod 3 States',
-                      subtitle:
-                          'Uses StateNotifierProvider. Fully unit-testable and decouples screen layouts from business rule steps.',
-                    ),
-                    _FeatureTile(
-                      icon: Icons.alt_route_rounded,
-                      title: 'GoRouter Navigation',
-                      subtitle:
-                          'Dynamic deep-linking and cleaner page mapping with query parameter support.',
-                    ),
-                    _FeatureTile(
-                      icon: Icons.style_outlined,
-                      title: 'Premium Design System',
-                      subtitle:
-                          'Harmonious custom dark palette with glassmorphism borders and glowing gradient components.',
-                    ),
-                  ],
-                ),
-              ),
+              const Spacer(),
 
               AppButton(
                 text: 'Sign Out',
