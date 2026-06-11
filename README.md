@@ -1,4 +1,4 @@
-# Princess App
+# Princess App 👑
 
 Princess is a Flutter prototype for a beauty and salon app. It focuses on the first-time user flow: onboarding, sign up, sign in, profile setup, forgot password, OTP verification, password reset, and a simple dashboard after authentication.
 
